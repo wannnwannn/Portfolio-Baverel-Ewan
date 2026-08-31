@@ -1,0 +1,142 @@
+body {
+    background-color: #e9c46a;
+}
+
+img {
+  max-width: 80%;
+  max-height: 30%;
+}
+
+header {
+    color: #e9c46a;
+    font-family: sans-serif;
+}
+
+article, h1, h3, p{
+    color: #264653;
+	font-family: sans-serif;
+}
+
+header,article {
+    background-color: #f5ebe0;
+    padding:20px;
+    margin:20px;
+    border-radius: 10px;
+}
+footer{
+  background-color: #f5ebe0;
+  padding-top: -30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+  margin:20px;
+  border-radius: 10px;
+}
+
+.instruction {
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 290px;
+  height: 90px;
+  border-radius: 10px;
+  background: #FFE6BD;
+
+}
+.instruparag{
+  margin-top: -10px;
+}
+
+
+.musiquesText {
+  padding-top: 10px;
+}
+
+.loading {
+  opacity: 80%;
+  background: #313131;
+	cursor: wait;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+.loading h1{
+  background: none;
+	border: none;
+	color: #e9c46a;
+	font-size: 30px;
+	font-family: "Open Sans",sans-serif;
+	font-variant: small-caps;
+	font-weight: 700;
+	height: 700px;
+	line-height: 700px;
+	margin: 0 0 10px;
+	padding: 0;
+	text-align: center;
+}
+
+.extraDiv{
+  background-color: white;
+  border: 20px;
+  border-color: black;
+  margin: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+
+}
+
+
+.canvas-container {
+  width: 90%;
+  height: 0;
+  padding-bottom: 60%;
+  position: relative;
+}
+
+.Canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100;
+  width: 90%;
+  height: 90%;
+}
+
+.arrow {
+ color: #ecf0f1;
+ font-size: 17px;
+ background-color: #ff9b54;
+ border: 1px solid #ffffff;
+ border-radius: 5px;
+ padding: 10px;
+ box-shadow: 0px 6px 0px #f4a261;
+ transition: all 50ms;
+ width: 120px;
+}
+
+.arrow:active {
+ box-shadow: 0px 2px 0px #f4a261;
+ position: relative;
+ top: 2px;
+}
+
+.colbutton {
+	color: white;
+	background-color: #ff9b54;
+	font-size: 17px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0px 6px 0px #f4a261;
+	transition: all 50ms;
+	width: 350px;
+}
+.colbutton:active {
+	box-shadow: 0px 2px 0px #f4a261;
+	position: relative;
+	top: 2px;
+}

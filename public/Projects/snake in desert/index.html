@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+		<title>Snake In the Desert</title>
+        
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="styles/pageStyle.css">
+    </head>
+
+    <body>
+      <div class="section">
+        <div class="zone_loader">
+          <span class="loader loader-quart"></span>
+          <span class="loading">
+            <h1>Chargement...</h1>
+          </span>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+      <script>
+      $(window).load(function() {
+        $(".section").fadeOut("1000");
+      })
+      </script>
+        <header>
+          <center>
+            <img src="Images/LogoSnakeDesert.png" alt="Logo Snake in the Desert">
+          </center>
+        </header>
+		      <article>
+
+            <h1> Snake </h1>
+            <h2> Historique : </h2>
+            <p> Snake est un genre de jeu vidéo où le joueur déplace un serpent qui s'allonge en mangeant des pions placés au hasard sur un damier.</p>
+            <p> Le concept de Snake provient du jeu d'arcade Blockade développé en 1976. On le retrouve aussi au début des années 2000 sur les téléphones portables de Nokia.</p>
+            <h2> Règles du jeu : </h2>
+            <p> Le serpent se dirige à l'aide des touches directionnelles ou ZQSD du clavier.</p>
+            <p> Le serpent doit manger les scarabés tout en évitant les collisions avec son propre corps.</p>
+            <p> Si vous touchez les bords du damier, soit le serpent apparaît de l'autre côté, soit le jeu se termine, et ce en fonction du mode que vous avez choisi.</p>
+            <p> Certains cactus sont mortels, alors ne les approchez pas.</p>
+
+            <h2> À vous de jouer : </h2>
+			<div class="instruction"><p class="instruparag">Pour jouer : choisissez une difficulté. <br>Si le scarabé ou le serpent n'apparaît pas, cliquez sur le score. <br>Note : les modes Médium et Difficile sont incompatibles avec les petits écrans.</p></div>
+			<h5></h5>
+			<button class="colbutton" id="colbut">Réapparaître de l'autre côté du damier</button>
+      <div class="PlayerInfo">
+        <p style="display: inline-block;" id="MultiplierTXT">Score : x1 | </p>
+        <p style="display: inline-block;" id="BestScoreTXT">Meilleur score : 0 | </p>
+        <p style="display: inline-block;" id="NBWinTXT">Parties gagnées : 0 | </p>
+        <p style="display: inline-block;" id="NBgames"> Parties jouées : 0</p>
+      </div>
+			<button class="button" id="startgame"> Votre Score <!-- Start Game-->
+			</button>
+
+			<button class="button_facile" id="easy">Facile <!-- Niveau facile -->
+			</button>
+
+			<button class="button_medium" id="medium">Médium <!-- Niveau Médium -->
+			</button>
+
+			<button class="button_hard" id="hard">Difficile <!-- Niveau hard -->
+			</button>
+			<button class="button_insane" id="insane">Insane <!-- Niveau Insane -->
+			</button>
+
+			<h1></h1>
+      <div id="canvas-container">
+        <canvas id="snakeCanvas" class="Canva"></canvas>
+      </div>
+	  <h3>Contrôles pour mobile</h3>
+	  <div class="mobileControls">
+      <button class="arrow" id="arrowL"> < </button>
+      <div class="vertical">
+        <button class="arrow" id="arrowU"> /\ </button>
+        <button class="arrow" id="arrowD"> \/ </button>
+      </div>
+      
+      <button class="arrow" id="arrowR"> > </button>
+	  </div>
+
+
+		   <h3 id="encouragement">Tu peux y arriver !<h3>
+
+
+
+
+
+
+
+
+
+		</article>
+
+		<footer>
+
+
+      <div class="extraDiv">
+        <center>
+          <h3 class="musiquesText">Extras</h3>
+        </center>
+        <center>
+          <button class="custom-btn" id="FlashButton">Mode Flash</button>
+          <button class="custom-btn" id="3scabButton">3 Scarabées</button>
+          <button class="custom-btn" id="0colide">0 collision</button>
+          <button class="custom-btn" id="V05">Vitesse x0.5</button>
+        </center>
+
+
+      </div>
+
+
+
+          <p class="FlashWarn">Merci de ne pas activer le mode « Flash » si vous êtes épileptique(s).</p>
+          <div style="display: inline-block;">
+            <p>Note : après avoir activé ou désactivé un extra, le jeu sera redémarré.</p>
+            <p>La vitesse du serpent peut changer en fonction du navigateur et de la puissance de votre appareil.</p>
+          </div>
+
+          <p>2023 - <a href="https://baverel-ewan.vercel.app/">BAVEREL Ewan</a></p>
+    </footer>
+
+		<script src="scripts/snake.js"></script>
+
+
+
+    </body>
+
+</html>
