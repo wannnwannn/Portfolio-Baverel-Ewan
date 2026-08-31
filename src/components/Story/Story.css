@@ -1,0 +1,64 @@
+.person {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+.name {
+    color: var(--coffee-bean);
+    font-family: 'Cabinet', sans-serif;
+    font-size: 2.25rem;
+    font-weight: bold;
+
+}
+.status {
+    color: var(--harvest-orange);
+    font-size: 2.25rem;
+    font-weight: lighter;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 5rem 10%;
+    width: fit-content;
+    
+}
+.card {
+    display: block;
+    border: 4px solid;
+    border-color: var(--coffee-bean);
+    border-radius: 1rem;
+}
+
+.card-title{
+    color: var(--coffee-bean);
+    font-family: 'Cabinet', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+}
+.card-content{
+    color: var(--coffee-bean);
+    font-family: 'Satoshi', sans-serif;
+    font-size: 1.5rem;
+    font-weight:normal;
+    padding: 2rem;
+}
+@media (max-width: 768px) {
+    .name, .status {
+        font-size: 2rem;
+        margin: 0.5rem;
+    }
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card-content{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .card-title{
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+}

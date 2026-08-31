@@ -1,0 +1,54 @@
+/* src/index.css */
+
+:root {
+  --cornsilk: #FEFCF4;
+  --coffee-bean: #1B140F;
+  --harvest-orange: #F57B0A;
+}
+
+body {
+  background-color: var(--cornsilk);
+  color: var(--coffee-bean);
+  margin: 1rem;
+  margin-bottom: 5rem;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    margin-bottom: 8rem;
+  }
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Cabinet';
+  src: url('./assets/fonts/CabinetGrotesk-Variable.woff2') format('woff2');
+  font-weight: 100 900; /* La magie est ici : on autorise toutes les graisses de 100 à 900 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 100 900; /* La magie est ici : on autorise toutes les graisses de 100 à 900 */
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Cabinet', sans-serif;
+  font-weight: 850; /* Tu peux utiliser une valeur ultra-précise */
+}
+
+p {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400; /* La valeur standard pour du texte de lecture */
+}
+
+a {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400; /* La valeur standard pour du texte de lecture */
+}

@@ -1,0 +1,103 @@
+.Projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 5rem 10%;
+    width: fit-content;
+    
+}
+@media (max-width: 768px) {
+    .Projects-container{
+        padding: 2rem 1rem;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-gap: 0.5rem !important;
+    }
+    
+    .Project-title {
+        font-size: 1rem !important;
+    }
+    .Project-tag{
+        font-size: 0.75rem !important;
+    }
+}
+.Project-card {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+
+.Project-card:hover{
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+}
+
+
+.Project-image {
+    height: auto;
+    width: 100%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    display: block;
+}
+.Project-description {
+    border: solid;
+    border-top: 2px;
+    border-color: var(--coffee-bean);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--cornsilk);
+    
+}
+.Project-title {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 1000;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0.5rem;
+}
+.Project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.Project-tag {
+    background-color: var(--coffee-bean);
+    color: var(--cornsilk);
+    padding: 0.5rem 1rem;
+    margin: 2px;
+    border-radius: 5rem;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    
+}
+.LinkDiv {
+    text-decoration: none;
+    color: var(--coffee-bean);
+}
+
+.filterButton {
+    border: 4px solid;
+    border-radius: 1rem;
+    border-color: var(--harvest-orange);
+    color: var(--coffee-bean);
+    font-size: 1.5rem;
+    transition-duration: 200ms;
+    
+}
+.filterButton.active {
+    background-color: var(--harvest-orange);
+    color: var(--cornsilk);
+    transform: scale(1.1);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}

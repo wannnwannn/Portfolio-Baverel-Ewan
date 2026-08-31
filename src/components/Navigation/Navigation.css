@@ -1,0 +1,210 @@
+.Navigation-container {
+  width: 100%;
+  height: 2.5rem;
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  z-index: 100;
+  pointer-events: none;
+  
+}
+.Nav-Icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .Navigation-container {
+    position: fixed;
+    bottom: 1rem;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    z-index: 1000;
+  }
+  .Nav-Icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    color: var(--cornsilk);
+    transition: 100ms ease-in-out;
+  }
+  .Nav-Icon.active {
+    color: var(--harvest-orange);
+  }
+
+  .Navigation-list {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    gap: 1rem !important;
+    border: 0 !important;
+  }
+
+  .Nav-Text {
+    display : none;
+  }
+
+  .Language-switcher {
+    display: none;
+    padding: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 0.5rem !important;
+  }
+  .Language-current {
+    display: none;
+  }
+  .Language-dropdown {
+    top: auto !important;
+    bottom: 120% !important;
+    right: 0% !important;
+    width: fit-content !important;
+  }
+  .Language {
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+
+.Navigation-list {
+  list-style: none;
+  display: inline-flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--coffee-bean);
+  border-radius: 10rem;
+  border: 8px solid var(--coffee-bean);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  pointer-events: auto;
+  
+}
+.Nav-Text {
+  text-decoration: none;
+  color: var(--cornsilk);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 10rem;
+  border-style: solid;
+  border-width: 4px;
+  border-color: var(--coffee-bean);
+  text-transform: uppercase;
+}
+.Navigation-link {
+  text-decoration: none;
+}
+
+.Nav-Text.active {
+  border-color: var(--harvest-orange);
+  border-style: solid;
+  border-width: 4px;
+
+}
+
+.language-icon{
+  fill: var(--coffee-bean);
+  transition: all 0.3s ease;
+}
+
+
+.Language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 10rem;
+  border: 2px solid var(--coffee-bean);
+  font-family: 'Satoshi', sans-serif;
+  color: var(--coffee-bean);
+  position: relative;
+  background-color: var(--cornsilk);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  pointer-events: auto;
+  transition: all 0.3s ease;;
+}
+.Language-switcher:hover {
+  color: var(--cornsilk);
+  background-color: var(--coffee-bean);
+  transform: scale(1.02);
+}
+.Language-switcher:hover .language-icon {
+  fill: var(--cornsilk);
+}
+.Language-switcher:active {
+  transform: scale(0.80);
+}
+.Language-current {
+  border-radius: 10rem;
+  padding: 0.5rem 1rem;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+
+.Language {
+  color: var(--cornsilk);
+  border-radius: 10rem;
+  border-bottom: 5px solid var(--harvest-orange);
+  border-top: 1px solid var(--harvest-orange);
+  border-right: 1px solid var(--harvest-orange);
+  border-left: 1px solid var(--harvest-orange);
+  padding: 0.5rem 1rem;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block;
+}
+.Language:hover {
+  border-bottom: 1px solid var(--harvest-orange);
+  margin-bottom: 4px;
+  transform:scale(0.95) translateY(5px);
+
+
+}
+.Language-dropdown {
+  pointer-events: auto;
+  text-decoration: none;
+  position: absolute;
+  top: 110%;
+  right: 0%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--coffee-bean);
+  color: var(--cornsilk);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  z-index: -1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.473);
+  width: 100%;
+  gap: 0.5rem;
+          
+}
+
+
+.Navigation {
+  pointer-events: none;
+}

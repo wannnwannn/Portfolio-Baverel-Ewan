@@ -1,0 +1,46 @@
+.Home-container{
+    background-color: var(--coffee-bean);
+    padding: 4rem;
+    min-height: 70vh;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .Home-container{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+        min-height: 0vh;
+        max-height: 100vh;
+        border-top-left-radius: 0rem;
+        border-top-right-radius: 0rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        grid-gap: 0.5rem;
+        margin-top: 0rem;
+        top: 0;
+        padding-top:5rem;
+
+    }
+    #Hero{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #p{
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+
+#Name{
+    grid-column: 1;
+    grid-row: 1;
+}
+#Hero{
+    grid-column: 2;
+    grid-row: 1;
+}

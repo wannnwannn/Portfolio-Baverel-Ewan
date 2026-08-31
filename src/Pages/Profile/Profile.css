@@ -1,0 +1,110 @@
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 5rem 10%;
+    width: fit-content;
+}
+
+.CV {
+    background-color: var(--harvest-orange);
+    color: var(--cornsilk);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-family: 'Cabinet', sans-serif;
+    font-size: 2rem;
+    
+}
+.social-container {
+    display: block;
+    align-items: center;
+    border: 4px solid;
+    border-radius: 1rem;
+    border-color: var(--harvest-orange);
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    
+}
+.social-title{
+    color: var(--harvest-orange);
+    font-family: 'Cabinet', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    justify-self: center;
+
+}
+.github {
+    display: block;
+    color: var(--harvest-orange);
+    justify-self: center;
+}
+
+.elements {
+    background-color: var(--coffee-bean);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    color: var(--cornsilk);
+}
+svg {
+    display: block;
+    color: var(--cornsilk);
+    justify-self: center;
+    padding: 8px;
+}
+
+.headerContainer {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Cabinet', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+}
+h2{
+    margin: 0;
+}
+.language {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: justify !important;
+    width: 100% !important;
+}
+.language-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.level {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: right !important;
+    width: 100% !important;
+}
+.software {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+@media (max-width: 768px) {
+    .skills{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1rem;
+    }
+    .CV, .social-title {
+        font-size: 1.5rem;
+    }
+    .social-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .elements {
+        display: block;
+    }
+
+}
+.links{
+    justify-self: center;
+}
