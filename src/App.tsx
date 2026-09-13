@@ -5,10 +5,13 @@ import Home from './Pages/Home/Home';
 import Profile from './Pages/Profile/Profile';
 import Projects from './Pages/Projects/Projects';
 import ProjectDetail from './Pages/ProjectDetail/ProjectDetail';
+import Footer from './components/Footer/Footer';
+import Legal from './Pages/Legal/Legal';
 
 import './i18n';
 import './index.css'; // Ton design system
 import { useState } from 'react';
+
 
 function App() {
   const [filter, setFilter] = useState("tous")
@@ -37,9 +40,12 @@ function App() {
 
             {/* Route 2 : page dynamique isolée */}
             <Route path="/projet/:id" element={<ProjectDetail />} />
+            <Route path="/Legal" element={<Legal />} />
           </Routes>
         </main>
+        <Footer />
       </div>
+
     </BrowserRouter>
   );
 }

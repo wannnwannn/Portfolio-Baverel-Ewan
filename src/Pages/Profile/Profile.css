@@ -28,6 +28,12 @@
     padding: 0.5rem 1rem;
     
 }
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
 .social-title{
     color: var(--harvest-orange);
     font-family: 'Cabinet', sans-serif;
@@ -86,6 +92,15 @@ h2{
     display: flex;
     flex-wrap: wrap;
     
+}
+.software svg {
+    color: var(--cornsilk);
+    transition: all 0.3s ease;
+
+}
+.software svg:hover {
+    color: var(--harvest-orange);
+
 }
 
 @media (max-width: 768px) {

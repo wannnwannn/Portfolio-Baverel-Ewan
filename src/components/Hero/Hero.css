@@ -42,4 +42,5 @@
 .Card-arrow {
   font-size: 1.5rem;
   transition: all 0.3s ease;
+  color: var(--cornsilk);
 }

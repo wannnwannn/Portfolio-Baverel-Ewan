@@ -74,18 +74,37 @@
 
 
 .gallery {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
     grid-column: 2;
     grid-row: 1;
+    align-self: center; 
     width: 100%;
-    padding: 0.5rem 0rem;
 }
 
-.picture {
-    display: block;
+.carousel-wrapper {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+/* single-media*/
+.picture, video {
+    max-width: 100%;
     height: auto;
+    max-height: 70vh; 
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     border-radius: 1rem;
+    display: block;
+    margin: 0 auto;
+}
+
+/* dual-media */
+.dual-media .picture, 
+.dual-media video {
+    max-height: 35vh; 
 }
 button {
     background-color: var(--cornsilk);
@@ -102,10 +121,23 @@ button {
 
     
 }
-.arrow-button{
-    transition: all 0.2s ease;
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0rem;
+    margin-top: 1rem;
 }
-.arrow-button:active{
+
+.arrow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    color: var(--coffee-bean);
+}
+
+.arrow-button:active {
     transform: scale(0.8);
 }
 .tag-container {
@@ -138,6 +170,7 @@ button {
     padding: 0;
     color: var(--coffee-bean);
     text-transform: uppercase;
+    
 }
 .explanation {
     font-family: 'satoshi', sans-serif;
@@ -146,6 +179,7 @@ button {
     margin: 0;
     padding: 0;
     color: var(--coffee-bean);
+    white-space: pre-line;
 }
 
 .content {

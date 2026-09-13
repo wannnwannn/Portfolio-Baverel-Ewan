@@ -11,6 +11,25 @@ interface ProjectsProps {
 
 export const getProjectsData = (t: TFunction) => [
     { 
+        id: "editfest", 
+        filtre: "AV",
+        title: "The Last Good Earth", 
+        tags: ["DaVinci Resolve", "Sound Design", "Color grading"], 
+        date:"2025", 
+        image:"/Images/editfest/cover.webp", 
+        category:"vidéo", 
+        goal:"Création d’une bande-annonce d'une minute pour un film fictif dans le cadre du concours Editfest organisé par Filmsupply", 
+        demoLink:"", 
+        sourceCode:"", 
+        video:"/Images/editfest/video.mp4",
+        picture: ["/Images/editfest/timeline.webp"],
+        defi:"Créer une rupture émotionnelle chez le spectateur en un temps limité à partir de séquences imposées par Filmsupply.", 
+        solution:"J’ai choisi de mettre en opposition la nostalgie de souvenirs paisibles et l’urgence apocalyptique afin d’instaurer une tension dramatique. \n \n J’ai réalisé le montage sur DaVinci Resolve en créant une rupture visuelle forte entre les cadres temporels en procédant ainsi :\n- Génération d’une voix apaisante étant volontairement en contradiction avec le renforcement de l’agressivité musicale grâce à une IA text-to-speech.\n- Vignettage de la première partie accompagné d’un léger étalonnage aux tons chauds pour transmettre le souvenir.\n- Transition brutale accompagnée de sound design et d’images dramatiques avec un changement de ratio pour mieux surprendre et impliquer le spectateur dans le désastre qui se déroule.", 
+        impact:"Ainsi le spectateur se retrouve surpris par une fiction dystopique grâce au contraste entre des adieux légers et un monde brutal. Ce conflit permet de capter l’attention en un temps restreint.", 
+        language:"",
+        code:``
+    },
+    { 
         id: "snake", 
         filtre: "dev",
         title: "Snake in the desert", 
@@ -19,7 +38,7 @@ export const getProjectsData = (t: TFunction) => [
         image:"/Images/snake/snakecover.webp", 
         category:t('jeu-video'), 
         goal:t('snakeGoal'), 
-        demoLink:"https://egao-game.itch.io/snake-in-desert", 
+        demoLink:"https://wanspace.itch.io/snake-in-the-desert", 
         sourceCode:"", 
         video:"",
         picture: ["/Images/snake/snakecover.webp","/Images/snake/pic1.webp"],

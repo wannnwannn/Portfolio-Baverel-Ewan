@@ -1,0 +1,41 @@
+.legal-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.legal-container {
+    display: flex;
+    flex-direction: column;
+    margin : 2rem 1rem;
+    width : 70vh;
+    padding : 1rem;
+    border: solid 2px var(--harvest-orange);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.legal-container h1 {
+    font-family: 'Cabinet', sans-serif;
+    font-size: 2rem;
+    color: var(--harvest-orange);
+    text-align: center;
+}
+.legal-container p, 
+.legal-container h2, 
+.legal-container h3, 
+.legal-container h4, 
+.legal-container h5, 
+.legal-container h6, 
+.legal-container li, 
+.legal-container span {
+    font-family: 'Cabinet', sans-serif;
+    font-size: 1.2rem;
+    color: var(--coffee-bean);
+    text-align: justify;
+    
+}
+.legal-container h2 {
+    font-family: 'Cabinet', sans-serif;
+    font-size: 1.5rem;
+    color: var(--harvest-orange);
+    text-align: justify;
+}

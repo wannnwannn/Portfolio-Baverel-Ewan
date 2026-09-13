@@ -56,17 +56,18 @@ export default function ProjectDetail() {
           
         </div>
         <div className='link'>
-          <a className='demoLink' href={project.demoLink} target='_blank'>{t('accessProject')}</a>
-          {project.sourceCode && (<a className='demoLink' href={project.sourceCode} target='_blank'>{t('AccessCode')}</a>)}
+          {project.demoLink && (<a className='demoLink' href={project.demoLink} target='_blank' rel="noopener noreferrer">{t('accessProject')}</a>)}
+          {project.sourceCode && (<a className='demoLink' href={project.sourceCode} target='_blank' rel="noopener noreferrer">{t('AccessCode')}</a>)}
         </div>
-        <div className='gallery'>
+        <div className={`gallery ${project.video && project.picture ? 'dual-media' : 'single-media'}`}>
           {project.video && (
-            <video width="320" height="240" controls>
+            <video preload="metadata" poster={project.image} style={{ borderRadius: '16px' }} controls>
               <source src={project.video} type="video/mp4"></source>
             </video>
           )}
-          {project.picture && (
-            <>
+          
+          {project.picture && Array.isArray(project.picture) && (
+            <div className="carousel-wrapper">
               <AnimatePresence mode='wait' custom={direction}>
                 <motion.img 
                   key={cursor} 
@@ -81,25 +82,25 @@ export default function ProjectDetail() {
                 />
               </AnimatePresence>
               
-              <button className='arrow-button' onClick={() => {
-                setDirection(-1); //gauche
-                setCursor(cursor === 0 ? project.picture.length - 1 : cursor - 1);
-              }}>
-                <ChevronLeft className='arrow'/>
-              </button>
-              
-              <button className='arrow-button' onClick={() => {
-                setDirection(1); //droite
-                setCursor(cursor === project.picture.length - 1 ? 0 : cursor + 1);
-              }}>
-                <ChevronRight className='arrow'/>
-              </button>
-            </>
-            )}
-            
-            
-
-
+              {project.picture.length > 1 && (
+                <div className="carousel-controls">
+                  <button className='arrow-button' onClick={() => {
+                    setDirection(-1);
+                    setCursor(cursor === 0 ? project.picture.length - 1 : cursor - 1);
+                  }}>
+                    <ChevronLeft className='arrow'/>
+                  </button>
+                  
+                  <button className='arrow-button' onClick={() => {
+                    setDirection(1);
+                    setCursor(cursor === project.picture.length - 1 ? 0 : cursor + 1);
+                  }}>
+                    <ChevronRight className='arrow'/>
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
         </div>
         <div className='tag-container'>
           <span className='date'>{project.date}</span>
@@ -123,10 +124,11 @@ export default function ProjectDetail() {
 
         </div>
         <div className='code'>
-          <SyntaxHighlighter language={project.language} style={vscDarkPlus} wrapLongLines>
+          {project.code && (<SyntaxHighlighter language={project.language} style={vscDarkPlus} wrapLongLines>
             {String(project.code)}
             
-          </SyntaxHighlighter>
+          </SyntaxHighlighter>)}
+          
 
         </div>
         
